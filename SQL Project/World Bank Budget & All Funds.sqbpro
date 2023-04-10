@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/NENE/Desktop/World Bank Budget &amp; All Funds.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="browser pragmas query structure" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="632"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,53:mainCentrally_Managed_Accounts_and_Miscellaneous_programs"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Centrally_Managed_Accounts_and_Miscellaneous_programs" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="300"/><column index="2" value="300"/><column index="3" value="81"/><column index="4" value="203"/><column index="5" value="155"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Client_Engagement" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="4" value="204"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Funded_by_External_Funds_All_Funds" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="219"/><column index="2" value="219"/><column index="3" value="81"/><column index="4" value="203"/><column index="5" value="155"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Institutional_Governance_and_Administrative_Services" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="140"/><column index="2" value="299"/><column index="3" value="81"/><column index="4" value="203"/><column index="5" value="155"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Operational_Grant_Making_Facilities" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="205"/><column index="2" value="300"/><column index="3" value="81"/><column index="4" value="203"/><column index="5" value="155"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Program_and_Practice_Management" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths/><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">--1st table, create Centrally_Managed_Accounts_and_Miscellaneous_programs table.
+
+CREATE TABLE Centrally_Managed_Accounts_and_Miscellaneous_programs(
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+ 
+--2nd table, create Client_Engagement table.
+ 
+CREATE TABLE Client_Engagement (
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+ 
+--3rd table, create Funded_by_External_Funds_All_Funds table.
+
+CREATE TABLE Funded_by_External_Funds_All_Funds (
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+
+--4th table, create Institutional_Governance_and_Administrative_Services table.
+
+CREATE TABLE Institutional_Governance_and_Administrative_Services (
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+
+--5th table, create Operational_Grant_Making_Facilities table.
+
+CREATE TABLE Operational_Grant_Making_Facilities (
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+
+--6th table, create Program_and_Practice_Management table.
+
+CREATE TABLE Program_and_Practice_Management (
+     Work_Program VARCHAR (255),
+     Unit VARCHAR (255),
+     Fiscal_Year INTEGER (10),
+     Bank_Budget_BB_US$_Millions REAL (10),
+     All_Funds_US$_Millions REAL (10)
+ );
+
+SELECT Work_Program,Unit,All_Funds_US$_Millions
+FROM Program_and_Practice_Management
+
+--INSERTING VALUES INTO THE TABLES
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2015', '311.3', '441.5')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2016', '391.7', '454.7')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2017', '406.6', '417.9')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2018', '101.4', '101.8')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2019', '102.6', '103.1')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2020', '102.3', '102.9')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2021', '119.2', '119.7')
+INSERT INTO Centrally_Managed_Accounts_and_Miscellaneous_programs VALUES ('Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', 'Centrally_Managed_Accounts_&amp;_Miscellaneous_Programs', '2022', '91.6', '92.1')
+
+SELECT *
+FROM Centrally_Managed_Accounts_and_Miscellaneous_programs
+
+--INSERTING VALUES INTO THE TABLES
+
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Africa', '2015', '167.8', '355.5')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'East Asia &amp; Pacific', '2015', '80.4', '197.4')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Other Operational Units Allocations', '2015', '0', '0')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Africa', '2016', '188.5', '366.1')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'South Asia', '2016', '82.6', '171')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Europe &amp; Central Asia', '2017', '77.6', '153.9')
+INSERT INTO Client_Engagement VALUES ('Global Engagement', 'Global Engagement', '2017', '72.9', '246.8')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Latin America &amp; Caribbean', '2018', '95.9', '150.5')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Middle East &amp; North Africa', '2018', '59.6', '166')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'East Asia &amp; Pacific', '2019', '109.3', '246.6')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Europe &amp; Central Asia', '2019', '87.1', '194.1')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Africa', '2020', '317', '586.1')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'East Asia &amp; Pacific', '2020', '115.1', '283.8')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Latin America &amp; Caribbean', '2020', '104.7', '184.6')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Europe &amp; Central Asia', '2020', '94.1', '226')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Africa East', '2021', '168.7', '321.5')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Africa West', '2021','168.6', '247.3')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'East Asia &amp; Pacific', '2021', '120.6', '254.9')
+INSERT INTO Client_Engagement VALUES ('Country Engagement', 'Europe &amp; Central Asia', '2022', '100', '211.3')
+INSERT INTO Client_Engagement VALUES ('Global Engagement', 'Global Engagement', '2022', '99.4', '290.4')
+
+SELECT *
+FROM Client_Engagement
+
+--INSERTING VALUES INTO THE TABLES
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2015', '-31.3', '-1242.7')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2016', '-163.8', '-1338.7')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2017', '-184', '-1347.5')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2018', '-195.7', '-1496')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2019', '-176.6', '-1615.5')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2020', '-188', '-1795.3')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2021', '-191.8', '-1723.1')
+INSERT INTO Funded_by_External_Funds_All_Funds VALUES ('Funded by External Funds - All Funds', 'Funded by External Funds - All Funds', '2022', '-197.6', '-1720')
+
+SELECT *
+FROM Funded_by_External_Funds_All_Funds
+
+--INSERTING VALUES INTO THE TABLES
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Administrative Services', 'Global Corporate Solutions', '2015', '129', '174')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Administrative Services', 'Human Resources', '2015', '56.6', '72.8')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Administrative Services', 'Information &amp; Technology Solutions', '2015', '230.9', '273.7')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Administrative Tribunal', '2016', '1.6', '2.1')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Boards', '2016', '90.1', '90.1')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Corporate Secretariat', '2016', '15.5', '16.5')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Group Internal Audit', '2017', '7.7', '10.2')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Operational Policy &amp; Country Services', '2017', '45.4', '46.1')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'WBG Finance &amp; Accounting', '2017', '38.5', '44.2')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Administrative Services', 'Human Resources', '2018', '68.4', '84.4')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Boards', '2018', '100.7', '100.7')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Integrity Vice Presidency', '2019', '20.9', '21.3')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Office of Senior Vice President Mahmoud Mohieldin', '2019', '6.4', '6.4')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Governance Services', 'Office of Suspension &amp; Debarment', '2019', '1.8', '1.8')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Development Finance', '2020', '25.3', '33.8')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'External &amp; Corporate Relations', '2020', '53.5', '57.6')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Strategy, Performance, and Adminstration', '2021', '11.2', '14.9')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Treasury', '2021', '34.8', '90')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Operational Policy &amp; Country Services', '2022', '47.3', '47.3')
+INSERT INTO Institutional_Governance_and_Administrative_Services VALUES ('Institutional Services', 'Strategy, Performance, and Adminstration', '2022', '11.3', '15.4')
+
+SELECT *
+FROM Institutional_Governance_and_Administrative_Services
+
+--INSERTING VALUES INTO THE TABLES
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Consultative Group for International Agricultural Research', '2015', '47', '47')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Development Grant Facility', '2015', '32.8', '32.8')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2015', '5', '5')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Consultative Group for International Agricultural Research', '2016', '30', '30')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Development Grant Facility', '2016', '12', '12')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2016', '5', '5')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Development Grant Facility', '2017', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2017', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Institutional Development Fund', '2017', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2018', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Institutional Development Fund', '2018', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'State and Peace Building Fund', '2018', '5', '5')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Consultative Group for International Agricultural Research', '2019', '30', '30')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2019', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Institutional Development Fund', '2020', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'State and Peace Building Fund', '2020', '5', '5')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'State and Peace Building Fund', '2021', '5', '5')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Consultative Group for International Agricultural Research', '2021', '30', '30')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Development Grant Facility', '2022', '0', '0')
+INSERT INTO Operational_Grant_Making_Facilities VALUES ('Operational Grant Making Facilities', 'Global Partnership for Social Accountability', '2022', '0', '0')
+
+SELECT *
+FROM Operational_Grant_Making_Facilities
+
+--INSERTING VALUES INTO THE TABLES
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Equitable Growth, Finance and Institutions', '2015', '0', '0')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Global Practice', '2015', '190.5', '211.2')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Global Themes', '2015', '4.5', '27.1')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Africa', '2016', '113.4', '115.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'East Asia &amp; Pacific', '2016', '54.6', '56.9')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Europe &amp; Central Asia', '2016', '55', '57.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Europe &amp; Central Asia', '2017', '57.8', '59.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Latin America &amp; Caribbean', '2017', '49.4', '50.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Middle East &amp; North Africa', '2017', '32.8', '38.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Other Operational Support', '2018', '62.2', '62.2')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Sustainable Development', '2018', '105.9', '163.7')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Africa', '2018', '119.4', '122.8')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'East Asia &amp; Pacific', '2019', '61.3', '65')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Europe &amp; Central Asia', '2019', '55.1', '56.1')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Latin America &amp; Caribbean', '2020', '56.9', '60.3')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Middle East &amp; North Africa', '2020', '36.5', '38.7')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'Africa West', '2021', '79.3', '81.5')
+INSERT INTO Program_and_Practice_Management VALUES ('Regions Program &amp; Practice Management', 'East Asia &amp; Pacific', '2021', '79.3', '91.7')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Infrastructure', '2022', '18.3', '35')
+INSERT INTO Program_and_Practice_Management VALUES ('Practice Groups Program &amp; Practice Management', 'Sustainable Development', '2022', '26.5', '91')
+
+---Data Exploration using SQL queries
+
+SELECT *
+FROM Centrally_Managed_Accounts_and_Miscellaneous_programs
+
+SELECT *
+FROM Client_Engagement
+WHERE Unit = 'Africa'
+
+SELECT *
+FROM Funded_by_External_Funds_All_Funds
+
+
+SELECT *
+FROM Institutional_Governance_and_Administrative_Services
+
+SELECT *
+FROM Operational_Grant_Making_Facilities
+WHERE Unit = 'Global Partnership for Social Accountability'
+
+SELECT *
+FROM Program_and_Practice_Management
+WHERE Unit = 'Africa'
+
+
+SELECT fiscal_year, Bank_Budget_BB_US$_Millions, All_Funds_US$_Millions
+FROM program_and_Practice_Management</sql><current_tab id="0"/></tab_sql></sqlb_project>
